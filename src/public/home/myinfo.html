@@ -1,0 +1,25 @@
+<div class="container">
+	<div ng-init="info.validate()">
+
+		<div ng-if="info.reg">Not Signed Up Yet. <a ui-sref="public.signup"> Signup Now!</a></div>
+		<div ng-if="!info.reg">
+			<h1>Your Registration Information</h1>
+			<div>First Name : {{info.userData.firstName}}
+			</div>
+			<div>Last Name : {{info.userData.lastName}}
+			</div>
+			<div>Email : {{info.userData.email}}
+			</div>
+			<div>Phone : {{info.userData.phone}}
+			</div>
+			<div>
+				Your Favorite Menu Item Number: {{info.userData.favorite}}
+				<div>Title : {{info.itemSelected.name}}
+				</div>
+				<div>Description : {{info.itemSelected.description}}</div>
+				<div>Image <img ng-src="/images/menu/{{info.itemSelected.short_name}}/{{info.itemSelected.short_name}}.jpg"> </div>
+			</div>
+		</div>
+
+	</div>
+</div>
